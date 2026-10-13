@@ -1,0 +1,15 @@
+# Text-only LoRA training preset; keep separate from the legacy LESS environment.
+# Python >= 3.10. Install the CUDA-enabled torch build appropriate for the server.
+# Install the project with --no-deps to avoid the legacy pins in requirement.txt.
+torch>=2.6,<3
+transformers==5.3.0
+peft==0.18.1
+accelerate>=1.3,<2
+datasets>=3,<5
+numpy>=1.26,<3
+pandas>=2.2,<3
+sentencepiece>=0.2,<0.3
+safetensors>=0.4.3,<1
+pillow>=10,<13
+# Only required for Qwen gradient feature extraction, not training or evaluation.
+traker==0.1.3
